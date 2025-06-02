@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music World</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(image.jpg);
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            border: 2px dashed #4a90e2;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            color: #87ceeb;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        .section {
+            margin: 30px 20px;
+            border: 2px dashed #4a90e2;
+            border-radius: 10px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #87ceeb;
+        }
+
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            max-width: 1200px;
+        }
+
+        .album-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            aspect-ratio: 1;
+        }
+
+        .album-item:hover {
+            transform: scale(1.05);
+        }
+
+        .album-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(74, 144, 226, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(135, 206, 235, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(30, 60, 114, 0.2) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            .album-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .header h1 {
+                font-size: 32px;
+            }
+            
+            .nav-bar {
+                gap: 5px;
+            }
+            
+            .nav-btn {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <div class="header">
+        <h1>Music World</h1>
+    </div>
+
+    <div class="nav-bar">
+        <button class="nav-btn">HOME</button>
+        <button class="nav-btn">ABOUT US</button>
+        <button class="nav-btn">CATEGORY</button>
+        <button class="nav-btn">PRODUCTION</button>
+        <button class="nav-btn">GALLERY</button>
+        <button class="nav-btn">CONTACT US</button>
+        <button class="nav-btn">LOGIN</button>
+    </div>
+
+    <div class="section">
+        <div class="section-title">→ Latest Album ...</div>
+        <div class="album-grid">
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647" alt="Album 1">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b2735675e83f707f1d7271e5cf8a" alt="Album 2">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273dc30583ba717007b00cceb25" alt="Album 3">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273bb54dde68cd23e2a268ae0f5" alt="Album 4">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273629d81caa11f1c77c9dd2b31" alt="Album 5">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273508c1bb5e9e83e8e9faf7c42" alt="Album 6">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96" alt="Album 7">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273ab6529da9ea0172c69b10ba4" alt="Album 8">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">→ TOP 10 Songs ...</div>
+        <div class="album-grid">
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273907084797fe400b7be7285b8" alt="Song 1">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273e8b066f70c206551210d902b" alt="Song 2">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273c8b444df094279e70d0ed856" alt="Song 3">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273bcee0d98ad6b4f2a2bbba9ce" alt="Song 4">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273674e5fc50c4c32ac5892cadf" alt="Song 5">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b27350a3147b4edd7701a876c6ce" alt="Song 6">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273f907de96b9a4fbc04accc0d5" alt="Song 7">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab67616d0000b273a7520e2e8d5b0b203d63e9ed" alt="Song 8">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">→ Top 10 Artist ...</div>
+        <div class="album-grid">
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab6761610000e5eb36a9e5abcb3b11e54ba3badc" alt="Artist 1">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab6761610000e5eb5a00969a4698c3132a15fbb0" alt="Artist 2">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab6761610000e5eb8ae7f2aaa9817a704a87ea36" alt="Artist 3">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab6761610000e5eb73348c4ba22f6a74fb90e9da" alt="Artist 4">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab6761610000e5eb0c68f6c95232e716f0abee8d" alt="Artist 5">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab6761610000e5eb42ae1c4f7d102911c488dd4e" alt="Artist 6">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab6761610000e5eb7fcead687e99583072cc217b" alt="Artist 7">
+            </div>
+            <div class="album-item">
+                <img src="https://i.scdn.co/image/ab6761610000e5ebb99cacf8acd537820676726" alt="Artist 8">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
